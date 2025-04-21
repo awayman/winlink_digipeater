@@ -14,8 +14,8 @@ So far, most of this experimentation had been in my shack on my Windows computer
 MYCALL N0CALL-1
 CDIGIPEAT  0   0
 ```
-The MYCALL command is used to specify the callsign and SSID of the node, in this example I am using an SSID of 1 to signifiy that this is the first digipeater using this callsign.
+The MYCALL command is used to specify the callsign and SSID of the node, in this example I am using an SSID of 1 to signifiy that this is the first digipeater using this callsign. Replace N0CALL with your callsign.
 
 The CDIGITPEAT command is the Connected Mode Digipeater followed by the from channel and to channel. In this case both channels are the default '0' channel that correlates to the audio interface connected to the radio.
 
-This configuration will result in all packets addressed to N0CALL-1 being digipeated. 
+This configuration will result in all packets addressed to N0CALL-1 being digipeated on the same frequency that it is received on. To use this, set your radio to the same frequency of a reachable AX.25 packet Winlink node and start direwolf. On another radio using a Winlink client, specify that you want to connect the aforementioned Winlink node via N0CALL-1 and attempt to connect. You should hear all packet you send be repeated by your digipeater as well as all packets send from the Winlink node.
