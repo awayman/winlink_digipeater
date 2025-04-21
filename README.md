@@ -19,3 +19,9 @@ So far, most of this experimentation had been in my shack on my Windows computer
 - I needed a device to act as the TNC to connect to the radio
 - I needed a device to run Winlink compatible software
 - I needed a reliable connection to a Winlink node
+
+# Why a digipeater?
+If you are unable to reliably connect to a Winlink node in an area while portable, you may be tempted to setup a full-fledged Winlink node. This is a fairly complicated task that I don't really have any knowledge of. A much simpler way to quickly extend coverage is a digipeater within range of another Winlink node. In this case, if you can hit your digitpeater, you can hit the Winlink node. Additionally, with most Winlink clients, up to 2 digipeaters may be used, potentially further extending your range.
+
+# Winlink Clients
+My portable Winlink client of choice is the excellent [RadioMail](https://radiomail.app/) by WH6AZ. RadioMail has a built-in [software modem](https://radiomail.app/help/packet#softmodem) that works extremely well with a [Digirig Lite](https://digirig.net/digirig-lite-setup-manual/) and supports up to 2 [digipeaters](https://radiomail.app/help/packet#digipeater). Additionally, if your Dire Wolf digipeater is accessible on your network, you can [connect](https://radiomail.app/help/packet#direwolf) to it right in the app and send/receive mail directly.
