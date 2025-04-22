@@ -4,11 +4,11 @@
 MYCALL N0CALL-1
 CDIGIPEAT  0   0
 ```
-The MYCALL command is used to specify the callsign and SSID of the node, in this example I am using an SSID of 1 to signifiy that this is the first digipeater using this callsign. Replace N0CALL with your callsign.
+The MYCALL command is used to specify the callsign and SSID of the node, in this example I am using an SSID of 1 to signifiy that this is the first digipeater using this callsign. _Replace N0CALL with your callsign._
 
 The CDIGIPEAT command is the Connected Mode Digipeater followed by the from channel and to channel. In this case both channels are the default '0' channel that correlates to the audio interface connected to the radio.
 
-This configuration will result in all packets addressed to N0CALL-1 being digipeated on the same frequency that it is received on. To use this, set your radio to the same frequency of a reachable AX.25 packet Winlink node and start direwolf. On another radio using a Winlink client, specify that you want to connect the aforementioned Winlink Gateway via N0CALL-1 and attempt to connect. You should hear all packets you send be repeated by your digipeater as well as all packets send from the Winlink Gateway.
+This configuration will result in all packets addressed to N0CALL-1 being digipeated on the same frequency that it is received on. To use this, set your radio to the same frequency of a reachable AX.25 packet Winlink Gateway and start direwolf. On another radio using a Winlink client, specify that you want to connect the aforementioned Winlink Gateway via the N0CALL-1 digitpeater and attempt to connect. You should hear all packets you send be repeated by your digipeater as well as all packets send from the Winlink Gateway.
 
 # Winlink Background
 [Winlink](https://winlink.org/) is a popular digital radio network used by amateur radio operators around the world to communicate via radio email. It has modes that are supported on HF and VHF/UHF bands including AX.25 packet, VARA, and Pactor, among others. VARA is, by far, the most popular mode due to its superior performance, but it is a closed-source Windows-native application.
