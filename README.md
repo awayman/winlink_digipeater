@@ -13,7 +13,7 @@ This configuration will result in all packets addressed to N0CALL-1 being digipe
 # Winlink Background
 [Winlink](https://winlink.org/) is a popular digital radio network used by amateur radio operators around the world to communicate via radio email. It has modes that are supported on HF and VHF/UHF bands including AX.25 packet, VARA, and Pactor, among others. VARA is, by far, the most popular mode due to its superior performance, but it is a closed-source Windows-native application.
 
-When I started becoming interested in Winlink, I used VARA HF with a Signalink connected to my Kenwood TS-120S into a 40m doublet. I enjoyed finding nodes around the regions that I could connect to and mostly sent emails to myself. As I got bored with this, I wanted to explore more mobile operations using my Kenwood TM-V17A in my vehicle as well as man-portable. I purchased a [Digirig](https://digirig.net/) with the requisite cables and successfully connected to a relatively nearby gateway using my home 2m/70cm vertical on 2m over VARA FM. 
+When I started becoming interested in Winlink, I used VARA HF with a Signalink connected to my Kenwood TS-120S into a 40m doublet. I enjoyed finding gateways around the regions that I could connect to and mostly sent emails to myself. As I got bored with this, I wanted to explore more mobile operations using my Kenwood TM-V17A in my vehicle as well as man-portable. I purchased a [Digirig](https://digirig.net/) with the requisite cables and successfully connected to a relatively nearby gateway using my home 2m/70cm vertical on 2m over VARA FM. 
 
 So far, most of this experimentation had been in my shack on my Windows computer. To fully realize my portable Winlink dreams, I was going to need to solve a few problems:
 - I needed a device to act as the TNC to connect to the radio
@@ -21,10 +21,12 @@ So far, most of this experimentation had been in my shack on my Windows computer
 - I needed a reliable connection to a Winlink Gateway
 
 # Why a digipeater?
-A digipeater is much easier to setup and run than a full Winlink Gateway but can extend the VHF/UHF Winlink coverage in your area greatly. There currenlty isn't a way to publish the existence of your digipeater through official Winlink channels, that I am aware of, but your local ham groups may already dissiminate digipeater information locally. 
+A digipeater is much easier to setup and run than a full Winlink Gateway but can extend the VHF/UHF Winlink coverage in your area greatly. There currenlty isn't a way to publish the existence of your digipeater through official Winlink channels, that I am aware of, but your local ham groups may already dissiminate digipeater information locally. Using this method to configure a digipeater, your radio is also accessible over your local network to your Winlink clients, so you can send and receive Winlink email from anywhere on your network.
 
 # Winlink Clients
 My portable Winlink client of choice is the excellent [RadioMail](https://radiomail.app/) by WH6AZ. RadioMail has a built-in [software modem](https://radiomail.app/help/packet#softmodem) that works extremely well with a [Digirig Lite](https://digirig.net/digirig-lite-setup-manual/) and supports up to 2 [digipeaters](https://radiomail.app/help/packet#digipeater). Additionally, if your Dire Wolf instance is accessible on your network, you can [connect](https://radiomail.app/help/packet#direwolf) to it right in the app and send/receive mail directly.
 
 # What operating system should I use?
-I have had good success runing [arcOS](https://arcos-linux.com/) by KG4VDK on inexpensive laptop hardware as that is what I initially intended to run in my mobile setup before I came accross RadioMail. I really can't say enough great things about arcOS and how easy it is to use; it is essentially plug and play and comes preloaded with Dire Wolf, PAT (a cross-platform Winlink client), and many other radio applications. Another great option is a Raspberry Pi running Raspberry Pi OS, but that will take some setup on your part.
+I have had good success runing [arcOS](https://arcos-linux.com/) by KG4VDK on inexpensive laptop hardware as that is what I initially intended to run in my mobile setup before I came accross RadioMail. I really can't say enough great things about arcOS and how easy it is to use; it is essentially plug and play and comes preloaded with Dire Wolf, PAT (a cross-platform Winlink client), and many other radio applications. I still have plans to further build out my mobile data capabilities using arcOS and potentially other tools.
+
+Another great option is a Raspberry Pi running Raspberry Pi OS, but that will take some setup on your part.
