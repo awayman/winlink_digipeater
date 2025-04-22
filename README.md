@@ -8,17 +8,17 @@ The MYCALL command is used to specify the callsign and SSID of the node, in this
 
 The CDIGIPEAT command is the Connected Mode Digipeater followed by the from channel and to channel. In this case both channels are the default '0' channel that correlates to the audio interface connected to the radio.
 
-This configuration will result in all packets addressed to N0CALL-1 being digipeated on the same frequency that it is received on. To use this, set your radio to the same frequency of a reachable AX.25 packet Winlink node and start direwolf. On another radio using a Winlink client, specify that you want to connect the aforementioned Winlink node via N0CALL-1 and attempt to connect. You should hear all packets you send be repeated by your digipeater as well as all packets send from the Winlink node.
+This configuration will result in all packets addressed to N0CALL-1 being digipeated on the same frequency that it is received on. To use this, set your radio to the same frequency of a reachable AX.25 packet Winlink node and start direwolf. On another radio using a Winlink client, specify that you want to connect the aforementioned Winlink Gateway via N0CALL-1 and attempt to connect. You should hear all packets you send be repeated by your digipeater as well as all packets send from the Winlink Gateway.
 
 # Winlink Background
 [Winlink](https://winlink.org/) is a popular digital radio network used by amateur radio operators around the world to communicate via radio email. It has modes that are supported on HF and VHF/UHF bands including AX.25 packet, VARA, and Pactor, among others. VARA is, by far, the most popular mode due to its superior performance, but it is a closed-source Windows-native application.
 
-When I started becoming interested in Winlink, I used VARA HF with a Signalink connected to my Kenwood TS-120S into a 40m doublet. I enjoyed finding nodes around the regions that I could connect to and mostly sent emails to myself. As I got bored with this, I wanted to explore more mobile operations using my Kenwood TM-V17A in my vehicle as well as man-portable. I purchased a [Digirig](https://digirig.net/) with the requisite cables and successfully connected to a relatively nearby node using my home 2m/70cm vertical on 2m over VARA FM. 
+When I started becoming interested in Winlink, I used VARA HF with a Signalink connected to my Kenwood TS-120S into a 40m doublet. I enjoyed finding nodes around the regions that I could connect to and mostly sent emails to myself. As I got bored with this, I wanted to explore more mobile operations using my Kenwood TM-V17A in my vehicle as well as man-portable. I purchased a [Digirig](https://digirig.net/) with the requisite cables and successfully connected to a relatively nearby gateway using my home 2m/70cm vertical on 2m over VARA FM. 
 
 So far, most of this experimentation had been in my shack on my Windows computer. To fully realize my portable Winlink dreams, I was going to need to solve a few problems:
 - I needed a device to act as the TNC to connect to the radio
 - I needed a device to run Winlink compatible software
-- I needed a reliable connection to a Winlink node
+- I needed a reliable connection to a Winlink Gateway
 
 # Why a digipeater?
 A digipeater is much easier to setup and run than a full Winlink Gateway but can extend the VHF/UHF Winlink coverage in your area greatly. There currenlty isn't a way to publish the existence of your digipeater through official Winlink channels, that I am aware of, but your local ham groups may already dissiminate digipeater information locally. 
